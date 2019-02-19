@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <% include ..\views\partials\head %>
+  </head>
+  <body>
+    
+      <header>
+          <% include ..\views\partials\header %>
+      </header>
+   
+
+
+
+      <div class="content">
+      
+          <% _.each(items, function(topC) { %>
+          
+              <h1><%= topC.name %></h1>
+              <p><%= topC.page_description %></p>
+              <% if (topC.image) { %>
+              <div>
+                  <img src="/images/<%= topC.image %>">
+              </div>
+              <% } %>
+            </br>
+              
+                <button type="button" class="btn btn-info btn-lg"> <a href="/<%= topC.id %>"> View Products</a></button>
+                
+                 
+              
+          <% }); %>
+          
+          
+          
+</div>
+  
+
+
+
+  <footer>
+      <% include ..\views\partials\footer %>
+    </footer>
+
+</body>
+  
+</html>

@@ -1,0 +1,26 @@
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 97%
+}
+
+
+.sticky + .content {
+  padding-top: 102px;
+}
+.container-name div {
+    
+    float: left;
+	width: 500px;
+	min-height: 50px;
+	background-color: #eee;
+	height: auto;
+  }
+  

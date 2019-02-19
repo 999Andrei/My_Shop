@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <% include ..\views\partials\head %>
+  </head>
+  <body>
+    
+      <header>
+          <% include ..\views\partials\header %>
+      </header>
+
+    </br>
+
+
+
+      <h1><%= title %></h1>
+
+
+<!-- Show all the subcategories which have the parent_category_id womens -->
+      <div>
+            
+            <ol>
+                <% _.each(items, function(topC) { %>
+                <% _.each(topC.categories, function(subC) { %>
+
+                  <%  if (subC.parent_category_id ==="womens") { %>
+                    
+                  
+                <li>
+                    <h2><%= subC.name %></h1>
+                    <p><%= subC.page_description %></p>
+                    <% if (subC.image) { %>
+                    <div>
+                        <img src="/images/<%= subC.image %>">
+                    </div>
+                    <% } %>
+                  </br>
+                    <button type="button" class="btn btn-info btn-lg"> <a href="/<%= topC.id %>/<%= subC.id %>"> View Products</a></button>
+                </li>
+                <% } %>
+                <% }); %>      
+                <% }); %>              
+            </ol>
+        </div> 
+
+      
+
+
+
+
+
+      <footer>
+        <% include ..\views\partials\footer %>
+      </footer>
+  
+  </body>
+    
+  </html>
