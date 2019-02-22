@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <% include ..\views\partials\head %>
+  </head>
+  <body>
+    
+      <header>
+          <% include ..\views\partials\header %>
+      </header>
+    </br>
+  </br>
+
+
+    <h2><%= product.name %></h2>
+   <p> <%=product.long_description%></p>
+   <p>Price:$ <%=product.price%> </p>
+   <img src="/images/<%= product.image_groups[0].images[0].link %>">
+    <div style="float:right">
+   <button type="button" class="btn btn-danger btn-lg"> Buy Now!</button>
+</div>
+  </br>
+  
+  
+
+</br>
+</br>
+
+   <footer>
+    <% include ..\views\partials\footer %>
+  </footer>
+
+</body>
+
+</html>

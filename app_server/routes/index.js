@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var ctrlPages=require('../controllers/pages');
 var ctrlsubCat_andProd=require('../controllers/subCat_andProd');
-
+var ctrlviewProducts=require('../controllers/viewproduct');
   
   /* Location of the pages */
   router.get('/',ctrlPages.index);
@@ -18,4 +18,5 @@ var ctrlsubCat_andProd=require('../controllers/subCat_andProd');
    router.get('/mens/mens-clothing/mens-clothing-dress-shirts',ctrlsubCat_andProd.mensclothingdressshirts);
    router.get('/mens/mens-clothing/mens-clothing-shorts',ctrlsubCat_andProd.mensclothingshorts);
    router.get('/mens/mens-clothing/mens-clothing-pants',ctrlsubCat_andProd.mensclothingpants);
+   router.get('/p/:pid',ctrlviewProducts.product);
 module.exports = router;

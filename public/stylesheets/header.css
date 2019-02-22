@@ -17,8 +17,8 @@
 }
 .container-name div {
     
-    float: left;
-	width: 500px;
+    display: inline-block;
+	width: 600px;
 	min-height: 50px;
 	background-color: #eee;
 	height: auto;
