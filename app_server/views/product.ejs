@@ -15,11 +15,21 @@
 
     <h2><%= product.name %></h2>
    <p> <%=product.long_description%></p>
-   <p>Price:$ <%=product.price%> </p>
+   
+   
    <img src="/images/<%= product.image_groups[0].images[0].link %>">
-    <div style="float:right">
+   <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+      <button type="button" class="btn btn-primary">Price: <%=product.price%> USD</button>
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        </div>
+      </div>
+    </div> 
+   
    <button type="button" class="btn btn-danger btn-lg"> Buy Now!</button>
-</div>
+   
+
   </br>
   
   

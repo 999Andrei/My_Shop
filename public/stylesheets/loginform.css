@@ -1,0 +1,111 @@
+.container{
+  width: 220px;
+  height:auto;
+  margin:50px auto 0px;
+  border: 2px sollid #777;
+  background: #5b228e;
+  border-radius:10px;
+  padding-bottom: 25px;
+  box-shadow: 2px 2px 6px 0px rgba(0,0, 0, 0.36);
+  overflow: hidden;
+}
+
+.container #icon {
+  width:100%;
+  text-align:center;
+  font-size: 75px;
+  color:white;
+}
+.container form{
+  width: 75px;
+  height: 20px;
+  background: white;
+  text-align: center;
+  margin: 10px auto 0px;
+  padding-top: 10px;
+  overflow: hidden;
+  border-radius: 25px;
+  border:1px solid;
+  transition-property: width, height;
+  transition-delay: 0s,.4s;
+  transition-duration: .8s, 1.5s;
+}
+.container form input{
+  width: 90%;
+  margin-top: 12px;
+  border: 0px solid;
+  outline: none;
+  border-bottom:2px solid #777;
+  padding-bottom: 6px;
+transition-property: border-bottom-color;
+transition-duration: .3s;
+}
+
+
+.container form input:focus{border-bottom-color:#5b228e }
+
+.container form input[type="submit"]{
+  width: 0px;
+  height: 30px;
+  border: none;
+  background: #21b984;
+  color: white;
+  line-height: 30px;
+  font-weight: 900;
+  border-radius:25px;
+  transition-property: width, box-shadow;
+  transition-delay: 1.6s, 0s;
+  transition-duration: 1s, .4s;
+}
+.container form input[type="submit"]:hover{
+  box-shadow: 2px 2px 5px 0px rgba(0,0, 0, 0.36);
+ }
+
+ #btn:checked ~ form{
+   width: 90%;
+   height:200px;
+   border-radius:10px;
+ }
+ #btn:checked ~ form input[type="submit"]{
+  width: 80px;
+ }
+ #btn{
+  width: 82px;
+  height: 32px;
+  -webkit-appearance: none;
+  outline:none;
+  text-align: center;
+ line-height: 32px;
+ font-weight: bolder;
+ color: #5b228e;
+ position: relative;
+ font-size: 15px; 
+ top: 60px;
+ left: 50%;
+ transform: translate(-50%, -70%);
+ transition-property: top,opacity,visibility;
+ transition-delay: .6s,0s;
+ transition-duration: 2s,1.6s;
+ }
+ #btn::before{
+   content: 'SIGN UP';
+ }
+ #btn:checked{
+  top:400px;
+  opacity:0;
+  visibility: hidden;
+}
+.container span{
+  width: 40%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top:0px;
+  left:-170%;
+  transform: skewX(10deg);
+  transition-delay: .8s;
+  transition-duration: 1.5s;
+}
+#btn:checked ~ span{
+  left: 70%;
+}
