@@ -88,7 +88,7 @@ transition-duration: .3s;
  transition-duration: 2s,1.6s;
  }
  #btn::before{
-   content: 'SIGN UP';
+   content: 'SIGN IN';
  }
  #btn:checked{
   top:400px;

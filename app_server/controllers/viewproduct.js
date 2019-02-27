@@ -3,7 +3,7 @@ module.exports.product = function(req, res){
   var mdbClient = require('mongodb').MongoClient;
   
   mdbClient.connect("mongodb://localhost:27017/shop", function(err, db) {
-    var id = req.params.pid;  
+    var id = req.params.prid;  
   var productFound = db.collection('products').findOne({id: id});
   productFound.then(function(product) {
 

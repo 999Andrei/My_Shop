@@ -15,6 +15,7 @@
     "http-errors": "~1.6.2",
     "logger": "0.0.1",
     "mongodb": "^2.2.19",
+    "mongoose": "^5.4.15",
     "morgan": "~1.9.0",
     "session": "^0.1.0",
     "underscore": "^1.9.1"
